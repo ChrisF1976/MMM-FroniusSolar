@@ -1,6 +1,7 @@
 Module.register("MMM-FroniusSolar", {
     defaults: {
-        updateInterval: 60000, // Update every 60 seconds
+        InverterIP: "192.168.178.134",
+	updateInterval: 60000, // Update every 60 seconds
         icons: {
             P_Akku: "mdi:car-battery",
             P_Grid: "mdi:transmission-tower",
@@ -26,8 +27,9 @@ Module.register("MMM-FroniusSolar", {
     start: function () {
         this.solarData = null;
         this.solarSOC = null; // Added for SOC
-        this.sendSocketNotification("GET_FRONIUS_DATA");
-        this.scheduleUpdate();
+        console.log("[MMM-FroniusSolar] Sending configuration to node_helper...");
+        this.sendSocketNotification("SET_CONFIG", this.config); // Send configuration to node_helper
+        this.scheduleUpdate(); // Schedule periodic updates
     },
 
     getStyles: function () {
