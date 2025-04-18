@@ -2,7 +2,7 @@
   "name": "MMM-FroniusSolar",
   "version": "1.0.0",
   "description": "Ein MagicMirror² Modul zur Visualisierung von Fronius-Solardaten mit stilisierten SVG-Gauges.",
-  "main": "MMM-FroniusSolar3.js",
+  "main": "MMM-FroniusSolar.js",
   "scripts": {
     "start": "echo 'Dieses Modul ist für den Einsatz im MagicMirror vorgesehen und wird dort automatisch geladen.'"
   },
